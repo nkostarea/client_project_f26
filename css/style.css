@@ -1,3 +1,5 @@
+/* I used Claude (Anthropic, 2026) to review my HTML and CSS for any typos, and it also suggested code for the step number badges and the active-page class, which I reviewed and adapted. 
+I kept aria-current, tabindex, role="region" and aria-label because they fix accessibility issues: Sources: MDN (aria-current) and Adrian Roselli, “Under-Engineered Responsive Tables.” */
 * {
     box-sizing: border-box;
 }
