@@ -12,13 +12,15 @@
     <header>
 
   <a class="skip-link" href="#main">Skip to Main Content</a>
+        <div>
         <img src="images/umsi-logo.jpg" alt="UMSI Logo">
+  </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="prep.html">Preparing for Your Experience</a></li>
                 <li><a href="start.html">Starting Your Experience</a></li>
-                <li><a href="during.html" class="active" aria-current="page">During Your Experience</a></li>
+                <li><a href="during.html" class="active" aria-current="page">During Your Experience</a></li> <!-- citation: MDN. (n.d). ARIA: aria-current attribute. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current -->
             </ul>
         </nav>
     <h1>During Your Journey!</h1>
@@ -52,74 +54,121 @@
 
   <article>
     <h3>Featured Resources & Handouts</h3>
-    <div class="table-wrap" tabindex="0" role="region" aria-label="Featured resources and handouts table">
-    <table>
-      <thead>
-      <tr>
-        <th scope="col">Category</th>
-        <th scope="col">Resource Name</th>
-        <th scope="col">Purpose</th>
-      </tr>
-      </thead>
-      <tbody>
-      <tr>
-        <td>Observation & Needfinding</td>
-        <td>HFLI - AEIOU Worksheet for Observations</td>
-        <td>Framework to categorize field observations (Activities, Environments, Interactions, Objects, Users).</td>
-      </tr>
-      <tr>
-        <td>User Research</td>
-        <td>HFLI User-Needs-Insights Worksheet</td>
-        <td>Translates raw interview and observation data into actionable design insights.</td>
-      </tr>
-      <tr>
-        <td>Feedback Management</td>
-        <td>HFLI Feedback Worksheet</td>
-        <td>Structures mid-point feedback cycles between students, instructors, and partners.</td>
-      </tr>
-      <tr>
-        <td>Case Analysis</td>
-        <td>Ginsberg Center - Community Engagement Cases Handout</td>
-        <td>Practical scenarios illustrating ethical dilemmas and resolution strategies.</td>
-      </tr>
-      <tr>
-        <td>Sponsor Tracking</td>
-        <td>Sponsor Dashboard Template - Organizational Excellence</td>
-        <td>High-level status dashboard to keep external clients informed on project health.</td>
-      </tr>
-      <tr>
-        <td>Communications Plan</td>
-        <td>Student Project Communications Plan Example & Template</td>
-        <td>Establishes meeting cadences, channels, and response windows for teams.</td>
-      </tr>
-      <tr>
-        <td>Workflow Tracking</td>
-        <td>Project Management Worksheet</td>
-        <td>Hands-on tool for breaking down project goals into milestones and task assignments.</td>
-      </tr>
-      </tbody>
-    </table>
+    <ul class="resource-list">
+    <li class="resource-item">
+      <strong class="resource-category">Observation & Needfinding</strong>
+      <h3 class="resource-name">HFLI - AEIOU Worksheet for Observations</h3>
+      <p class="resource-purpose">Framework to categorize field observations (Activities, Environments, Interactions, Objects, Users).</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">User Research</strong>
+      <h3 class="resource-name">HFLI User-Needs-Insights Worksheet</h3>
+      <p class="resource-purpose">Translates raw interview and observation data into actionable design insights.</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">Feedback Management</strong>
+      <h3 class="resource-name">HFLI Feedback Worksheet</h3>
+      <p class="resource-purpose">Structures mid-point feedback cycles between students, instructors, and partners.</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">Case Analysis</strong>
+      <h3 class="resource-name">Ginsberg Center - Community Engagement Cases Handout</h3>
+      <p class="resource-purpose">Practical scenarios illustrating ethical dilemmas and resolution strategies.</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">Sponsor Tracking</strong>
+      <h3 class="resource-name">Sponsor Dashboard Template - Organizational Excellence</h3>
+      <p class="resource-purpose">High-level status dashboard to keep external clients informed on project health.</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">Communications Plan</strong>
+      <h3 class="resource-name">Student Project Communications Plan Example & Template</h3>
+      <p class="resource-purpose">Establishes meeting cadences, channels, and response windows for teams.</p>
+    </li>
+
+    <li class="resource-item">
+      <strong class="resource-category">Workflow Tracking</strong>
+      <h3 class="resource-name">Project Management Worksheet</h3>
+      <p class="resource-purpose">Hands-on tool for breaking down project goals into milestones and task assignments.</p>
+    </li>
+    </ul>
+      <p class="resource-purpose">Questions about these resources? Contact the <a href="mailto:umsi.engagement@umich.edu">Engaged Learning Office.</a></p>
     </div>
   </article>
 
 </section>
-
   <aside>
     <h2>Stay Connected with ELO</h2>
     <p>Get updates about ELO programs, workshops, events, and opportunities through the weekly newsletter.</p>
     <div>
        <a href="https://umsi.info/elo-newsletter"> Sign up for the ELO newsletter</a>
     </div>
+    <h3>Contact the ELO</h3>
+    <form action="https://formspree.io/f/xrpqakzn" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name" name="name" required class="form-input">
+        <br> <br>
+
+        <label for="message">Leave A Message</label>
+        <textarea name="message" id="message" placeholder="Enter Your Message" required class="form-input"></textarea>
+        <br>
+
+        <input type="checkbox" id="want-response" value="Yes">
+        <label for="want-response">I'd like a response</label>
+        <br> <br>
+
+        <div id="email-field" class="email-field">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Enter Your Email Address" id="email" name="email" class="form-input">
+          <br>
+          <br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <br> <br>
+    </form>
+
+    <script>
+      let checkbox = document.getElementById("want-response");
+      let emailField = document.getElementById("email-field");
+      checkbox.addEventListener("click", function() { // citation: W3Schools. (n.d.). HTML DOM Events. https://www.w3schools.com/jsref/dom_obj_event.asp; W3Schools. (n.d.). JavaScript Event Listener. https://www.w3schools.com/js/js_htmldom_eventlistener.asp //
+        if (checkbox.checked) {
+          emailField.style.display = "block";
+        } else {
+          emailField.style.display = "none";
+        }
+      });
+
+      let submitButton = document.querySelector("button[type='submit']");
+      submitButton.addEventListener("click", function(event) {
+        let name = document.getElementById("name").value;
+        let message = document.getElementById("message").value;
+        if (name === "" || message === "") {
+          event.preventDefault(); // citation: W3Schools. (n.d.). preventDefault() Event Method. https://www.w3schools.com/jsref/event_preventdefault.asp //
+          alert("Please fill in your name and message before submitting.");
+        }
+      });
+    </script>
+
     <p>Questions? Email <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>.</p>
   </aside>
 
     </main>
     <footer>
         <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+        <p>Find resources for your stage: <a href="prep.html"> Preparing for Your Experience</a> | <a href="start.html"> Starting Your Experience</a> | <a href="during.html"> During Your Experience</a> | <a href="index.html"> Home Page</a></p>
       <address>
+        2200 Hayward Street <br>
+        Ann Arbor, MI 48109 <br>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>document.getElementById("year").textContent = new Date().getFullYear();</script> <!-- Codexworld. (2023). How to Get the Current Year to Display Dynamic Year in Copyright using JavaScript. https://www.codexworld.com/how-to/get-current-year-to-display-dynamic-year-in-copyright-using-javascript/-->
     </footer>
 </body>
 </html>

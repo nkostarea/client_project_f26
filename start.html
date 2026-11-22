@@ -12,12 +12,14 @@
     <header>
 
   <a class="skip-link" href="#main">Skip to Main Content</a>
+    <div>
         <img src="images/umsi-logo.jpg" alt="UMSI Logo">
+  </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="prep.html">Preparing for Your Experience</a></li>
-                <li><a href="start.html" class="active" aria-current="page">Starting Your Experience</a></li>
+                <li><a href="start.html" class="active" aria-current="page">Starting Your Experience</a></li> <!-- citation: MDN. (n.d). ARIA: aria-current attribute. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current -->
                 <li><a href="during.html">During Your Experience</a></li>
             </ul>
         </nav>
@@ -55,22 +57,73 @@
   </article>
 </section>
 
-  <aside>
+    <aside>
     <h2>Stay Connected with ELO</h2>
     <p>Get updates about ELO programs, workshops, events, and opportunities through the weekly newsletter.</p>
     <div>
        <a href="https://umsi.info/elo-newsletter"> Sign up for the ELO newsletter</a>
     </div>
+    <h3>Contact the ELO</h3>
+    <form action="https://formspree.io/f/xrpqakzn" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name" name="name" required class="form-input">
+        <br> <br>
+
+        <label for="message">Leave A Message</label>
+        <textarea name="message" id="message" placeholder="Enter Your Message" required class="form-input"></textarea>
+        <br>
+
+        <input type="checkbox" id="want-response" value="Yes">
+        <label for="want-response">I'd like a response</label>
+        <br> <br>
+
+        <div id="email-field" class="email-field">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Enter Your Email Address" id="email" name="email" class="form-input">
+          <br>
+          <br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <br> <br>
+    </form>
+
+    <script>
+      let checkbox = document.getElementById("want-response");
+      let emailField = document.getElementById("email-field");
+      checkbox.addEventListener("click", function() {
+        if (checkbox.checked) {
+          emailField.style.display = "block";
+        } else {
+          emailField.style.display = "none";
+        }
+      });
+
+      let submitButton = document.querySelector("button[type='submit']");
+      submitButton.addEventListener("click", function(event) {
+        let name = document.getElementById("name").value;
+        let message = document.getElementById("message").value;
+        if (name === "" || message === "") {
+          event.preventDefault();
+          alert("Please fill in your name and message before submitting.");
+        }
+      });
+    </script>
     <p>Questions? Email <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>.</p>
   </aside>
 
     </main>
     <footer>
         <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+        <p>Find resources for your stage: <a href="prep.html"> Preparing for Your Experience</a> | <a href="start.html"> Starting Your Experience</a> | <a href="during.html"> During Your Experience</a> | <a href="index.html"> Home Page</a></p>
       <address>
+        2200 Hayward Street <br>
+        Ann Arbor, MI 48109 <br>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
     </footer>
 </body>
 </html>
+

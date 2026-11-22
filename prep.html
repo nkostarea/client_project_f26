@@ -12,11 +12,13 @@
     <header>
 
   <a class="skip-link" href="#main">Skip to Main Content</a>
+  <div>
         <img src="images/umsi-logo.jpg" alt="UMSI Logo">
+  </div>
         <nav>
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="prep.html" class="active" aria-current="page">Preparing for Your Experience</a></li>
+                <li><a href="prep.html" class="active" aria-current="page">Preparing for Your Experience</a></li> <!-- citation: MDN. (n.d). ARIA: aria-current attribute. https://developer.mozilla.org/en-US/docs/Web/Accessibility/ARIA/Reference/Attributes/aria-current -->
                 <li><a href="start.html">Starting Your Experience</a></li>
                 <li><a href="during.html">During Your Experience</a></li>
             </ul>
@@ -74,7 +76,7 @@
 
   <article>
     <h3>Recommended Preparation Process</h3>
-    <ol class="steps">
+    <ol class="steps"> <!-- citation: W3. (2018). Selectors Level 3. https://www.w3.org/TR/selectors-3/; Claude (2026) suggested using a separate class to style the step numbers after I wrote all the code and needed debugging with the style for step number badges. I chose the class name step-num and wrote the HTML and CSS.-->
       <li><span class="step-num">1</span><strong>Reflect on your position:</strong> Identify the experiences, identities, assumptions, and areas of privilege that may shape your approach.</li>
       <li><span class="step-num">2</span><strong>Learn about the context:</strong> Research the organization, community, project history, affected stakeholders, and broader social conditions.</li>
       <li><span class="step-num">3</span><strong>Set learning goals:</strong> Record the technical, professional, interpersonal, and ethical skills you want to develop.</li>
@@ -87,13 +89,13 @@
   <article>
     <h3>Featured Preparation Resources</h3>
     <ul class="resource-list">
-      <li><strong><a href="https://sites.lsa.umich.edu/equitable-teaching/social-identity-snapshot">Social Identity Snapshot</a></strong>: Diagnostic tool to reflect on self-awareness and positionality before entering community contexts.</li>
-      <li><strong><a href="https://docs.google.com/document/d/1Qt9YeStVwDHjwJhOLAz42JSNQR2lFMurdUtxtdrGkuc/edit?tab=t.0#heading=h.ch0bvccjkrzn">"Check Yourself" Community Engagement Checklist</a></strong>: Quick audit for personal assumptions and ethical readiness.</li>
-      <li><strong><a href="https://drive.google.com/file/d/1zc1RNlrDxV51-muOERdDTnINQcquJpOA/view?usp=sharing">IAP2 Spectrum of Public Participation</a></strong>: Framework for understanding levels of community involvement and decision-making power.</li>
-      <li><strong><a href="https://docs.google.com/document/d/1TrEDolwmOIlXgYgAP9VvlOGoYOwFfe6KxzZOgZSVYVw/edit?usp=drive_link">Project Scoping Handout & Terms</a></strong>: Guidance on translating partner needs into realistic project goals</li>
-      <li><strong><a href="https://docs.google.com/document/d/1AexsV_JeSd0kRUBbcifZpfBu6y6Zi8Y0iJScp1I3gkM/edit?usp=drive_link">Student Org Officer</a> & <a href="https://docs.google.com/document/u/0/d/1uwOOS0TrXWzcSShj8DUFpckWo0t1UNu_Q7WVbZnLhX0/edit">Project Manager Guide:</a></strong> Roles, expectations, and commitments for student organization leaders.</li>
-      <li><strong><a href="https://docs.google.com/document/d/1U4lCNGyWKJ3C2i_VgFqAR45Z4zF1FehuthuqT-M2wdI/edit?usp=drive_link">Project Manager Commitment Form</a></strong>: Formal agreement outlining responsibilities for student leads.</li>
-      <li><strong><a href="https://docs.google.com/document/d/1twc-7TYWmb_PNrOBiDI1NuJqJAuhluTICr22GRd_NLc/edit?usp=drive_link">Project Management Worksheet</a></strong>: Guidance on clarifying the project scope and objectives, team roles, and timeline. This worksheet can be used by the project team and shared with the client.</li>
+      <li><strong><a href="https://sites.lsa.umich.edu/equitable-teaching/social-identity-snapshot">Social Identity Snapshot:</a></strong> Diagnostic tool to reflect on self-awareness and positionality before entering community contexts.</li>
+      <li><strong><a href="https://docs.google.com/document/d/1Qt9YeStVwDHjwJhOLAz42JSNQR2lFMurdUtxtdrGkuc/edit?tab=t.0#heading=h.ch0bvccjkrzn">"Check Yourself" Community Engagement Checklist:</a></strong> Quick audit for personal assumptions and ethical readiness.</li>
+      <li><strong><a href="https://drive.google.com/file/d/1zc1RNlrDxV51-muOERdDTnINQcquJpOA/view?usp=sharing">IAP2 Spectrum of Public Participation:</a></strong> Framework for understanding levels of community involvement and decision-making power.</li>
+      <li><strong><a href="https://docs.google.com/document/d/1TrEDolwmOIlXgYgAP9VvlOGoYOwFfe6KxzZOgZSVYVw/edit?usp=drive_link">Project Scoping Handout & Terms:</a></strong> Guidance on translating partner needs into realistic project goals</li>
+      <li><strong><a href="https://docs.google.com/document/d/1AexsV_JeSd0kRUBbcifZpfBu6y6Zi8Y0iJScp1I3gkM/edit?usp=drive_link">Student Org Officer & </a> <a href="https://docs.google.com/document/u/0/d/1uwOOS0TrXWzcSShj8DUFpckWo0t1UNu_Q7WVbZnLhX0/edit">Project Manager Guide:</a></strong> Roles, expectations, and commitments for student organization leaders.</li>
+      <li><strong><a href="https://docs.google.com/document/d/1U4lCNGyWKJ3C2i_VgFqAR45Z4zF1FehuthuqT-M2wdI/edit?usp=drive_link">Project Manager Commitment Form:</a></strong> Formal agreement outlining responsibilities for student leads.</li>
+      <li><strong><a href="https://docs.google.com/document/d/1twc-7TYWmb_PNrOBiDI1NuJqJAuhluTICr22GRd_NLc/edit?usp=drive_link">Project Management Worksheet:</a></strong> Guidance on clarifying the project scope and objectives, team roles, and timeline. This worksheet can be used by the project team and shared with the client.</li>
     </ul>
   </article>
 </section>
@@ -104,16 +106,66 @@
     <div>
        <a href="https://umsi.info/elo-newsletter"> Sign up for the ELO newsletter</a>
     </div>
+    <h3>Contact the ELO</h3>
+    <form action="https://formspree.io/f/xrpqakzn" method="POST">
+        <label for="name">Your Name</label>
+        <input type="text" placeholder="Enter Your Name" id="name" name="name" required class="form-input">
+        <br> <br>
+
+        <label for="message">Leave A Message</label>
+        <textarea name="message" id="message" placeholder="Enter Your Message" required class="form-input"></textarea>
+        <br>
+
+        <input type="checkbox" id="want-response" value="Yes">
+        <label for="want-response">I'd like a response</label>
+        <br> <br>
+
+        <div id="email-field" class="email-field">
+          <label for="email">Your Email</label>
+          <input type="email" placeholder="Enter Your Email Address" id="email" name="email" class="form-input">
+          <br>
+          <br>
+        </div>
+
+        <button type="submit">Submit</button>
+        <br> <br>
+    </form>
+
+    <script>
+      let checkbox = document.getElementById("want-response");
+      let emailField = document.getElementById("email-field");
+      checkbox.addEventListener("click", function() {
+        if (checkbox.checked) {
+          emailField.style.display = "block";
+        } else {
+          emailField.style.display = "none";
+        }
+      });
+
+      let submitButton = document.querySelector("button[type='submit']");
+      submitButton.addEventListener("click", function(event) {
+        let name = document.getElementById("name").value;
+        let message = document.getElementById("message").value;
+        if (name === "" || message === "") {
+          event.preventDefault();
+          alert("Please fill in your name and message before submitting.");
+        }
+      });
+    </script>
     <p>Questions? Email <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>.</p>
   </aside>
 
     </main>
     <footer>
         <p>University of Michigan School of Information | <a href="https://www.si.umich.edu/programs/engaged-learning/about-engaged-learning-office">Engaged Learning Office </a></p>
+        <p>Find resources for your stage: <a href="prep.html"> Preparing for Your Experience</a> | <a href="start.html"> Starting Your Experience</a> | <a href="during.html"> During Your Experience</a> | <a href="index.html"> Home Page</a></p>
       <address>
+        2200 Hayward Street <br>
+        Ann Arbor, MI 48109 <br>
         <a href="mailto:umsi.engagement@umich.edu">umsi.engagement@umich.edu</a>
       </address>
-      <p>&copy; 2026 Regents of the University of Michigan</p>
+      <p>&copy; <span id="year"></span> Regents of the University of Michigan</p>
+      <script>document.getElementById("year").textContent = new Date().getFullYear();</script>
     </footer>
 </body>
 </html>
