@@ -325,7 +325,7 @@ footer {
 }
 
 /* Media queries for reduced motion */
-@media (prefers-reduced-motion: reduce) {
+@media (prefers-reduced-motion: reduce) { /* citation: a11ywithlindsey. (2019). Reducing Motion to Improve Accessibility. https://www.a11ywithlindsey.com/blog/reducing-motion-improve-accessibility */
     * {
         animation: none !important;
         transition: none !important;
